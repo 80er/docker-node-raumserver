@@ -13,7 +13,7 @@ RUN set -x \
 #    && gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C /
 
 COPY ./manifest/ .
-
+RUN chmod +x init
 # XXX: patch for broken template path. lots of trailing whitespace and windows line feeds, yummy.
 RUN set -x \
     && cd /node_modules \
