@@ -13,7 +13,6 @@ RUN set -x \
 #    && gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C /
 
 COPY ./manifest/ .
-RUN cp ./manifest/default.conf /etc/nginx/nginx.conf
 
 RUN chmod +x init
 # XXX: patch for broken template path. lots of trailing whitespace and windows line feeds, yummy.
