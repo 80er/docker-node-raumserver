@@ -1,2 +1,0 @@
-#!/usr/bin/execlineb -P
-sh -c "/bin/cp -a /config . && /bin/mkdir logs && /usr/bin/node /node_modules/node-raumserver/raumserver.js"
