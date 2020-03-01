@@ -11,9 +11,9 @@ RUN set -x \
 RUN set -x \
     && npm install node-raumserver
 
-#ADD https://github.com/just-containers/s6-overlay/releases/download/v1.21.4.0/s6-overlay-amd64.tar.gz /tmp/
-#RUN set -x \
-#    && gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C /
+ADD https://github.com/just-containers/s6-overlay/releases/download/v1.21.4.0/s6-overlay-amd64.tar.gz /tmp/
+RUN set -x \
+    && gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C /
 
 COPY ./manifest/ .
 
