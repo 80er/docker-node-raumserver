@@ -1,11 +1,8 @@
-FROM mhart/alpine-node:8
-
+FROM node:12.14.0
 WORKDIR /
-
-RUN set -x \
-    && apk update \
-    && apk add --no-cache nginx
-
+RUN apt-get update 
+RUN apt-get -y install apt-utils
+RUN apt-get -y install nginx
 # If you have native dependencies, you'll need extra tools
 # RUN apk add --no-cache make gcc g++ python
 RUN set -x \
