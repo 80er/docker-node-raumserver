@@ -1,0 +1,3 @@
+#!/bin/sh
+nginx
+sh -c "mkdir -p logs && node /node_modules/node-raumserver/raumserver.js"
